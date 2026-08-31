@@ -1,0 +1,22 @@
+<theater name="Hrvatsko narodno kazalište u Varaždinu">
+  <seasons>
+    <season name="2024/2025">
+      <plays>
+        <play name="Revizor">
+          <director>Saša Anočić</director>
+          <cast>
+            <actor>Sara Kovačević</actor>
+          </cast>
+        </play>
+      </plays>
+    </season>
+    <season name="2025/2026">
+      <plays>
+        <play name="test">
+          <director>Marin Blažević</director>
+          <cast/>
+        </play>
+      </plays>
+    </season>
+  </seasons>
+</theater>

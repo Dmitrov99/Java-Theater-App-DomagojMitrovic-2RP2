@@ -1,0 +1,23 @@
+<theater name="Hrvatsko narodno kazalište Ivana pl. Zajca">
+  <seasons>
+    <season name="2024/2025">
+      <plays>
+        <play name="Orašar">
+          <director>Staša Zurovac</director>
+          <cast>
+            <actor>Lovro Babić</actor>
+            <actor>Mia Radić</actor>
+          </cast>
+        </play>
+        <play name="Gospoda Glembajevi">
+          <director>Ivica Buljan</director>
+          <cast>
+            <actor>Lovro Babić</actor>
+            <actor>Marko Cindrić</actor>
+            <actor>Mia Radić</actor>
+          </cast>
+        </play>
+      </plays>
+    </season>
+  </seasons>
+</theater>

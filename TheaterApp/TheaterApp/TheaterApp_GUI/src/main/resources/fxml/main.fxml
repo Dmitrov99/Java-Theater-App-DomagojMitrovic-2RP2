@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="mainBorderPane" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.algebra.theaterapp_gui.controller.MainController">
+
+    <top>
+        <MenuBar>
+            <Menu text="View">
+                <MenuItem onAction="#showTheaters" text="Theaters" />
+
+                <MenuItem onAction="#showPlays" text="Plays" />
+
+                <MenuItem onAction="#showActors" text="Actors" />
+
+                <MenuItem onAction="#showDirectors" text="Directors" />
+
+            </Menu>
+
+            <Menu text="Administration">
+                <MenuItem onAction="#loadInitialData" text="Load initial data" />
+
+                <MenuItem onAction="#deleteAllData" text="Delete all data" />
+            </Menu>
+
+            <Menu text="Application">
+                <MenuItem onAction="#logout" text="Log out" />
+
+                <MenuItem onAction="#exit" text="Exit" />
+            </Menu>
+        </MenuBar>
+    </top>
+
+    <center>
+        <VBox alignment="CENTER" spacing="10.0">
+
+            <Label style="-fx-font-size: 20px; -fx-font-weight: bold;" text="Welcome to the Theater Management App" />
+
+            <Label text="Choose an option from the menu to continue." />
+        </VBox>
+    </center>
+
+</BorderPane>

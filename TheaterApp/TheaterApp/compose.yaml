@@ -1,0 +1,39 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: theater-postgres
+    restart: unless-stopped
+
+    environment:
+      POSTGRES_DB: KazalisteDb
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: secret
+
+    ports:
+      - "5432:5432"
+
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./TheaterApp_model/src/main/resources/sql/init:/docker-entrypoint-initdb.d:ro
+
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: theater-pgadmin
+    restart: unless-stopped
+
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: secret
+
+    ports:
+      - "5050:80"
+
+    depends_on:
+      - postgres
+
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin
+
+volumes:
+  postgres_data:
+  pgadmin_data:

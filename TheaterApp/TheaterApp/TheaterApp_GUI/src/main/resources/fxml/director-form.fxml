@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" prefHeight="390.0" prefWidth="550.0"
+      spacing="20.0"
+      xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="hr.algebra.theaterapp_gui.controller.DirectorFormController">
+
+    <padding>
+        <Insets top="24.0" right="24.0" bottom="24.0" left="24.0"/>
+    </padding>
+
+    <Label fx:id="formTitleLabel"
+           text="Add director"
+           style="-fx-font-size: 22px; -fx-font-weight: bold;"/>
+
+    <GridPane hgap="12.0" vgap="12.0">
+        <columnConstraints>
+            <ColumnConstraints halignment="RIGHT" minWidth="100.0"/>
+            <ColumnConstraints hgrow="ALWAYS" minWidth="250.0"/>
+        </columnConstraints>
+
+        <rowConstraints>
+            <RowConstraints/>
+            <RowConstraints/>
+            <RowConstraints/>
+            <RowConstraints/>
+            <RowConstraints/>
+        </rowConstraints>
+
+        <Label text="Director ID:"
+               GridPane.columnIndex="0"
+               GridPane.rowIndex="0"/>
+
+        <TextField fx:id="directorIdField"
+                   promptText="e.g. DIR-014"
+                   GridPane.columnIndex="1"
+                   GridPane.rowIndex="0"/>
+
+        <Label text="First name:"
+               GridPane.columnIndex="0"
+               GridPane.rowIndex="1"/>
+
+        <TextField fx:id="firstNameField"
+                   GridPane.columnIndex="1"
+                   GridPane.rowIndex="1"/>
+
+        <Label text="Last name:"
+               GridPane.columnIndex="0"
+               GridPane.rowIndex="2"/>
+
+        <TextField fx:id="lastNameField"
+                   GridPane.columnIndex="1"
+                   GridPane.rowIndex="2"/>
+
+        <Label text="OIB:"
+               GridPane.columnIndex="0"
+               GridPane.rowIndex="3"/>
+
+        <TextField fx:id="oibField"
+                   promptText="Exactly 11 digits"
+                   GridPane.columnIndex="1"
+                   GridPane.rowIndex="3"/>
+
+        <Label text="Direction style:"
+               GridPane.columnIndex="0"
+               GridPane.rowIndex="4"/>
+
+        <ComboBox fx:id="directionStyleComboBox"
+                  promptText="Select direction style"
+                  prefWidth="250.0"
+                  GridPane.columnIndex="1"
+                  GridPane.rowIndex="4"/>
+    </GridPane>
+
+    <HBox alignment="CENTER_RIGHT" spacing="10.0">
+        <Button mnemonicParsing="false"
+                onAction="#save"
+                text="Save"/>
+
+        <Button mnemonicParsing="false"
+                onAction="#cancel"
+                text="Cancel"/>
+    </HBox>
+</VBox>
